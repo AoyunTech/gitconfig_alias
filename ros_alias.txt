@@ -1,0 +1,24 @@
+##  ~/.bashrc
+
+#source /opt/ros/melodic/setup.bash
+#export ROS_MASTER_URI=http://localhost:11311
+#export ROS_IP=192.168.45.200 
+#export LD_LIBRARY_PATH=/usr/local/lib:/opt/ros/melodic/lib:/usr/local/cuda/lib64
+#export LD_LIBRARY_PATH=/usr/local/lib:/opt/ros/melodic/lib:/usr/local/cuda/lib64
+
+# Set ROS melodic
+# source /opt/ros/melodic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+
+# Set ROS Network
+#ifconfig查看你的电脑ip地址
+export ROS_HOSTNAME=192.168.5.23
+export ROS_MASTER_URI=http://${ROS_HOSTNAME}:11311
+
+# Set ROS alias command 快捷指令
+alias cw='cd ~/catkin_ws'
+alias cs='cd ~/catkin_ws/src'
+alias csb='source ~/catkin_ws/devel/setup.bash'
+alias cm='cd ~/catkin_ws && catkin_make && csb'
+
+
